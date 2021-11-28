@@ -16,8 +16,12 @@ public class LambdaDemoImpl {
 
     public static void main(String[] args) {
         // multi argument lambda exp with return type as well.
-        // return & argument types are inferred by the compiler.
-        LambdaDemo lambda = (num1, num2) -> num2 - num1;
+        // argument types are inferred by the compiler.
+        // multi-line lambda exp example. {Try to avoid these as much as possible}
+        LambdaDemo lambda = (num1, num2) -> {
+            if(num2 < num1) throw new ArithmeticException("num2 is less than num1");
+            else return num2 - num1;
+        };
         System.out.println(lambda.subtract(52, 74));
     }
 
