@@ -1,4 +1,4 @@
-package com.nvm.java8;
+package com.nvm.java8.lambda.demo;
 
 interface LambdaDemo {
     int subtract(int num1, int num2);
@@ -22,7 +22,7 @@ public class LambdaDemoImpl {
             if(num2 < num1) throw new ArithmeticException("num2 is less than num1");
             else return num2 - num1;
         };
-        System.out.println(lambda.subtract(52, 74));
+        System.out.println(lambda.subtract(74, 52));
     }
 
 
