@@ -1,7 +1,7 @@
 package com.nvm.java8;
 
 interface LambdaDemo {
-    void echo(int arg);
+    int subtract(int num1, int num2);
 }
 
 /**
@@ -15,9 +15,10 @@ interface LambdaDemo {
 public class LambdaDemoImpl {
 
     public static void main(String[] args) {
-        // single argument lambda exp
-        LambdaDemo lambda = (arg) -> System.out.println("argument passed: " + arg);
-        lambda.echo(52);
+        // multi argument lambda exp with return type as well.
+        // return & argument types are inferred by the compiler.
+        LambdaDemo lambda = (num1, num2) -> num2 - num1;
+        System.out.println(lambda.subtract(52, 74));
     }
 
 
