@@ -4,15 +4,19 @@ interface LambdaDemo {
     void valid();
 }
 
-// shows the traditional way of implementing an interface and verboseness of the same
-public class LambdaDemoImpl implements LambdaDemo {
-    @Override
-    public void valid() {
-        System.out.println("Yes, this option is valid");
-    }
+/**
+ * updated with lambda usage.
+ * ** no need of implementing the interface and overriding the abstract method
+ * ** lambdas expressions can only be used for functional interfaces => having only one abstract method.
+ * *** {any number of default/static methods allowed}.
+ * ** syntax of lambda expr => () -> {body}
+ */
+
+public class LambdaDemoImpl {
 
     public static void main(String[] args) {
-        LambdaDemo lambda = new LambdaDemoImpl();
+        // no argument lambda exp
+        LambdaDemo lambda = () -> System.out.println("Yes, this option is valid");
         lambda.valid();
     }
 
