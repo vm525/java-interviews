@@ -1,7 +1,7 @@
 package com.nvm.java8;
 
 interface LambdaDemo {
-    void valid();
+    void echo(int arg);
 }
 
 /**
@@ -15,9 +15,9 @@ interface LambdaDemo {
 public class LambdaDemoImpl {
 
     public static void main(String[] args) {
-        // no argument lambda exp
-        LambdaDemo lambda = () -> System.out.println("Yes, this option is valid");
-        lambda.valid();
+        // single argument lambda exp
+        LambdaDemo lambda = (arg) -> System.out.println("argument passed: " + arg);
+        lambda.echo(52);
     }
 
 
