@@ -5,3 +5,6 @@
 - Functional Interfaces and Lambda Expressions
 - Consumer/Predicate/Supplier function interfaces in SE 1.8
 - Stream API & functional programming in Java
+- Sorting a list/map via lambdas => various approaches
+- map & flatmap
+
